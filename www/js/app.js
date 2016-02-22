@@ -10,6 +10,7 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
   $stateProvider.state('login',{
     url: '/login',
     templateUrl:'views/login.html'
+
   });
 
   $stateProvider.state('clickit',{
@@ -27,23 +28,56 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
     templateUrl:'views/which-building.html'
   });
 
-  $urlRouterProvider.otherwise('/clickit');
+  $stateProvider.state('single-building',{
+    url: '/single-building',
+    abstract:true,
+    templateUrl:'views/single-building/index.html'
+  });
+
+  $stateProvider.state('single-building.home',{
+    url: '/home',
+    views:{
+      'tab-home':{
+        templateUrl:'views/single-building/home.html'
+      }
+    }
+  });
+
+  $stateProvider.state('single-building.posters',{
+    url: '/posters',
+    views:{
+      'tab-posters':{
+        templateUrl: 'views/single-building/posters.html'
+      }
+    }
+  });
+
+  $urlRouterProvider.otherwise('/login');
 
 
 }]);
 
 app.controller('LoginCtrl',['$scope',function($scope){
-
+  $scope.imgSrc = 'img/clickit_logo_full_no_background.png';
 }]);
 
 app.controller('ClickitCtrl',['$scope',function($scope){
 
 
-  $scope.imgSrc = '../img/clickit_button_unpressed.png';
+  $scope.imgSrc = 'img/clickit_button_unpressed.png';
 
   $scope.onClick = function(){
 
   };
+}]);
+
+app.controller('SingleBuildingCtrl',['$scope',function($scope){
+  $scope.title = 'Old Union';
+    $scope.imgSrc = 'img/clickit_logo_full.png';
+}]);
+
+app.controller('SlideCtrl',['$scope',function($scope){
+
 }]);
 
 

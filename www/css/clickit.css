@@ -1,12 +1,12 @@
 
 #button-clickit{
-	background: none;
+	/*background: none;*/
 	border:none;
 	bottom:0;
 	position: fixed;
+
 }
 
 #button-clickit img{
 	height:15em;
 }
-

@@ -1,15 +1,37 @@
-<ion-view ng-controller="ClickitCtrl">
+<ion-view title="Click!t" ng-controller="ClickitCtrl">
 
 	<ion-content>
 
-		
+
+
+<div class="row">
+	<div class="col">
+		<div class="card">
+			<div class="item item-avatar">
+				<img ng-src="../img/clickit_logo_full.png">
+		    <h2>Old Union</h2>
+		  </div>
+		</div>
+	</div>
+	<div class="col">
+		<div class="card">
+			<div class="item item-avatar">
+		    <img ng-src="../img/clickit_logo_full.png">
+		    <h2>Old Union</h2>
+		  </div>
+		</div>
+	</div>
+</div>
+
+
+
 
 	</ion-content>
 
-	
-	<button class="button button-block" id="button-clickit">
-		<img src="../img/clickit_button_unpressed.png">
-	</button>
+
+	<a href="#/which-building" class="button button-block" id="button-clickit">
+		<img ng-src="{{imgSrc}}">
+	</a>
 
 
 </ion-view>

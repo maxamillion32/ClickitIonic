@@ -17,6 +17,16 @@ app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlR
     templateUrl:'views/clickit.html'
   });
 
+  $stateProvider.state('register',{
+    url: '/register',
+    templateUrl:'views/register.html'
+  });
+
+  $stateProvider.state('which-building',{
+    url: '/which-building',
+    templateUrl:'views/which-building.html'
+  });
+
   $urlRouterProvider.otherwise('/clickit');
 
 
@@ -29,11 +39,11 @@ app.controller('LoginCtrl',['$scope',function($scope){
 app.controller('ClickitCtrl',['$scope',function($scope){
 
 
+  $scope.imgSrc = '../img/clickit_button_unpressed.png';
 
+  $scope.onClick = function(){
 
-
-  
-
+  };
 }]);
 
 

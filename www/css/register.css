@@ -1,0 +1,6 @@
+.register .list .item{
+  border:none;
+}
+.register .list .item input{
+  padding-left: 20px;
+}
